@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import styles from '../styles/SearchBar.module.css';
 
 export default function SearchBar(props) {
   // acá va tu código
@@ -16,13 +17,15 @@ export default function SearchBar(props) {
 
   return (
     <>
-      <div>Search Bar Component</div>
-      <form>
-        <input 
+      <div className={styles.title}>Shearch Something</div>
+      <form className={styles.form}>
+        <input
+          className={styles.input}
           value={input}
           onChange={onChangeValue}
         />
         <button
+          className={styles.button}
           onClick={handleClick}
         >
           Search

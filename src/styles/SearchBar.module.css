@@ -1,0 +1,22 @@
+.form {
+  margin: 20px;
+}
+
+.title {
+  font-size: 30px;
+}
+
+.input {
+  margin-right: 10px;
+  border-style: none;
+  border: 0.1px solid black;
+  border-radius: 5px;
+}
+
+.button {
+  button-style: none;
+  border: 0.2px solid black;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+}

@@ -11,3 +11,8 @@
     align-self: center;
     margin: auto;
 }
+
+.title h1 {
+    font-size: 50px;
+    font-family: 'Ubuntu', sans-serif;
+}
