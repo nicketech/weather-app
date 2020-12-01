@@ -6,11 +6,10 @@ export default function Cards(props) {
   // tip, podés usar un map
   return (
     <>
-      <div>Cards Component</div>
       {
-        props.cities.map( citi => (
+        props.cities.map( (citi, index) => (
           <div 
-            key={citi.id}
+            key={index}
             className="cities"
           >
             <Card 

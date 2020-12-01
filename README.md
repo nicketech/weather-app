@@ -61,4 +61,3 @@ Comienza a correr la aplicación de forma local por lo que se puede ver desde el
 http://localhost:3000
 
 >No es necesario volver a correr el proyecto cada vez que se realice un cambio sino que se verá automáticamente reflejando en el navegador.
-# weather-app

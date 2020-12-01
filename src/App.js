@@ -1,15 +1,16 @@
 import React from 'react';
 import './App.css';
+import Presentation from './components/Presentation';
 import Card from './components/Card.jsx';
 import Cards from './components/Cards.jsx';
 import SearchBar from './components/SearchBar.jsx';
 import data, { Cairns } from './data.js';
 
 function App() {
-console.log(data);
   return (
     <div className="App">
-      <div>
+      <Presentation />
+      <div className="container">
         <Card
           max={Cairns.main.temp_max}
           min={Cairns.main.temp_min}
@@ -19,7 +20,7 @@ console.log(data);
         />
       </div>
       <hr />
-      <div>
+      <div className="container">
         <Cards
           cities={data}
         />
