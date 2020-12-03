@@ -21,7 +21,6 @@ export default function Cards({cities, onClose}) {
                 max={citi.max}
                 img={citi.img}
                 onClose={() => onClose(citi.id)}
-                id={citi.id}
               />
             </div>))
         }

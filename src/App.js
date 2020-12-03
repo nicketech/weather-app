@@ -25,11 +25,17 @@ export default function App() {
         latitud: resolve.coord.lat,
         longitud: resolve.coord.lon
       };
-    setCities(cities => [...cities, city])
+      const exist = cities.filter(c => c.id === city.id);
+      if (exist.length > 0) {
+        alert('City already in cards')
+      } else {
+        setCities(cities => [...cities, city])
+      }
     } else {
     alert('City not found!');
     }
    })
+   .catch(err => alert(err));
   }
 
   const onClose = (id) => {

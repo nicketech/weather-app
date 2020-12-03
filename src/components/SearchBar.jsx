@@ -13,6 +13,7 @@ export default function SearchBar(props) {
   const handleClick = (e) => {
     e.preventDefault();
     props.onSearch(input);
+    setInput('')
   }
 
   return (
