@@ -9,8 +9,8 @@ export default function App() {
   
   const onSearch = (name) => {
   fetch(`http://api.openweathermap.org/data/2.5/weather?q=${name}&appid=a24e09744b6cde0a072231eca7cf9c20`)
-   .then(r => r.json())
-   .then(resolve => {
+    .then(r => r.json())
+    .then(resolve => {
     if (resolve.main !== undefined) {
       const city = {
         min: Math.round(resolve.main.temp_min),
@@ -35,7 +35,7 @@ export default function App() {
     alert('City not found!');
     }
    })
-   .catch(err => alert(err));
+   .catch(err => console.log(err));
   }
 
   const onClose = (id) => {
