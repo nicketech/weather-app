@@ -1,27 +1,37 @@
 import React from 'react';
 import Card from './Card';
+import styles from '../styles/Cards.module.css';
 
-export default function Cards(props) {
+export default function Cards({cities, onClose}) {
   // acá va tu código
   // tip, podés usar un map
-  return (
-    <>
-      {
-        props.cities.map( (citi, index) => (
-          <div 
-            key={index}
-            className="cities"
-          >
-            <Card 
-              name={citi.name}
-              min={citi.main.temp_min}
-              max={citi.main.temp_max}
-              img={citi.weather[0].icon}
-              onClose={() => alert(citi.name)}
-            />
-          </div>))
-      }
+  if (cities) {
+    return (
+      <>
+        <div className={styles.container}>
+        {
+          cities.map( (citi, index) => (
+            <div 
+              key={index}
+              className="cities"
+            >
+              <Card 
+                name={citi.name}
+                min={citi.min}
+                max={citi.max}
+                img={citi.img}
+                onClose={() => onClose(citi.id)}
+                id={citi.id}
+              />
+            </div>))
+        }
+        </div>
+      </>
+    );
+  } else {
+    return (
+    <div></div>
+    )
+  }
   
-    </>
-  )
 };

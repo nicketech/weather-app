@@ -3,7 +3,7 @@ import styles from '../styles/SearchBar.module.css';
 
 export default function SearchBar(props) {
   // acá va tu código
-  const [input, setInput] = useState();
+  const [input, setInput] = useState('');
 
 
   const onChangeValue = (e) => {
@@ -17,7 +17,6 @@ export default function SearchBar(props) {
 
   return (
     <>
-      <div className={styles.title}>Shearch Something</div>
       <form className={styles.form}>
         <input
           className={styles.input}
