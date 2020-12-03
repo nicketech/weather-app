@@ -8,7 +8,7 @@ export default function App() {
   const [cities, setCities] = useState([]);
   
   const onSearch = (name) => {
-  fetch(`http://api.openweathermap.org/data/2.5/weather?q=${name}&appid=a24e09744b6cde0a072231eca7cf9c20`)
+  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${name}&appid=a24e09744b6cde0a072231eca7cf9c20`)
     .then(r => r.json())
     .then(resolve => {
     if (resolve.main !== undefined) {
