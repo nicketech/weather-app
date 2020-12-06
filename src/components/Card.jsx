@@ -2,7 +2,6 @@ import React from 'react';
 import styles from '../styles/Card.module.css';
 
 export default function Card(props) {
-  // acá va tu código
   return (
     <> 
       <div className={styles.card}>
@@ -10,18 +9,26 @@ export default function Card(props) {
           <button onClick={props.onClose}>
             X
           </button></div>
-        <h2>{props.name}</h2>
+        <h1>{props.name}</h1>
         <div className={styles.info}>
           <div className={styles.outerbox}>
-            <div className={styles.box}>
-              <p>Min:</p>
-              <p>{props.min}</p>
-            </div> 
-            <div className={styles.box}>
-              <p>Max</p>
-              <p>{props.max}</p>
+            <div className={styles.databox}>
+              <div className={styles.mainbox}>
+                <h3>{`${props.temp} ° C`}</h3>
+              </div>
+              <div className={styles.box}>
+                <p>Min</p>
+                <p>{`${props.min} ° C`}</p>
+              </div> 
+              <div className={styles.box}>
+                <p>Max</p>
+                <p>{`${props.max} ° C`}</p>
+              </div>
             </div>
-            <div className={styles.img}><img src={`http://openweathermap.org/img/wn/${props.img}@2x.png`} alt="" /></div>
+            <div className={styles.imgcontainer}>
+              <div className={styles.img}><img src={`http://openweathermap.org/img/wn/${props.img}@2x.png`} alt="" /></div>
+              <p>{props.description[0].toUpperCase() + props.description.slice(1)}</p>
+            </div>
           </div>
         </div>
       </div>

@@ -8,10 +8,11 @@ export default function App() {
   const [cities, setCities] = useState([]);
   
   const onSearch = (name) => {
-  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${name}&appid=a24e09744b6cde0a072231eca7cf9c20`)
+  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${name}&units=metric&appid=a24e09744b6cde0a072231eca7cf9c20`)
     .then(r => r.json())
     .then(resolve => {
     if (resolve.main !== undefined) {
+      console.log(resolve)
       const city = {
         min: Math.round(resolve.main.temp_min),
         max: Math.round(resolve.main.temp_max),
@@ -21,6 +22,7 @@ export default function App() {
         temp: resolve.main.temp,
         name: resolve.name,
         weather: resolve.weather[0].main,
+        description: resolve.weather[0].description,
         clouds: resolve.clouds.all,
         latitud: resolve.coord.lat,
         longitud: resolve.coord.lon

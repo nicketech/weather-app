@@ -21,6 +21,7 @@ export default function SearchBar(props) {
       <form className={styles.form}>
         <input
           className={styles.input}
+          placeholder="Search a city"
           value={input}
           onChange={onChangeValue}
         />

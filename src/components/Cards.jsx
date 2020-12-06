@@ -15,11 +15,13 @@ export default function Cards({cities, onClose}) {
               key={index}
               className="cities"
             >
-              <Card 
+              <Card
+                temp={citi.temp}
                 name={citi.name}
                 min={citi.min}
                 max={citi.max}
                 img={citi.img}
+                description={citi.description}
                 onClose={() => onClose(citi.id)}
               />
             </div>))
