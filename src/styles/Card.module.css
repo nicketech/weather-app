@@ -50,3 +50,17 @@
 .imgcontainer {
   padding-top: 20px;
 }
+
+@media screen and (max-width: 600px) {
+  .card {
+    width: 410px;
+  }
+
+  .databox {
+    width: 280px;
+  }
+
+  .box {
+    width: 120px;
+  }
+}
