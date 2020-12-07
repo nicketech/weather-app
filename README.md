@@ -1,3 +1,3 @@
-<h2>Link: <a href="https://nickweatherapp.netlify.app/">Weather App</a></h2>
+<h2><a href="https://nickweatherapp.netlify.app/">Weather App</a></h2>
 
-<p>API: <a href="https://openweathermap.org/">Open Weather</a></p>
+<p><a href="https://openweathermap.org/">Open Weather API</a></p>
